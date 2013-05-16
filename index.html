@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <style>
+    body { margin:0; padding:0;}
+    #map { position:absolute; top:0; bottom:0; width:100%; z-index:-1;}
+	.marker-popup {
+		
+	  font-family: "Helvetica" !important;
+	  padding:15px;
+  	    }
+	.marker-popup:after {
+	    }
+	.marker-popup:before {
+	    }
+	.CCGV p{
+		font-family: "Helvetica" !important;
+	}
+	.CEDA p{
+		font-family: "Helvetica" !important;
+	}
+	
+	.zoomer {
+	  	width:30px;
+		height:30px;
+	  	top:130px;
+	  	left:10px;
+		z-index:0;
+	    }
+	.zoomin {
+	    background-position:-31px -1px;
+	    left:39px;
+	    -webkit-border-radius:0 3px 3px 0;
+	            border-radius:0 3px 3px 0;
+	    }
+	.zoomout {
+	    background-position:-61px -1px;
+	    -webkit-border-radius:3px 0 0 3px;
+	            border-radius:3px 0 0 3px;
+	    }
+	a {
+	    color:#00BACC;
+	    text-decoration: none;
+	  	}
+	a:hover{
+		text-decoration: underline;
+		}
+	.title{
+		height:100px;
+		background:lightblue;
+		color:white;
+		font: 50px "Helvetica";
+		padding:10px;
+		z-index:0;
+		box-shadow: 5px 5px 5px #888;
+		}
+	.title p{
+		font: 20px "Helvetica";
+		color: #2d5e88;
+		margin: 10px 20px 0 30px;
+		}
+	.accessibility-info{
+		position:absolute;
+		border-radius:10px;
+		top:130px;
+		right:10px;
+		height:auto;
+		width:400px;
+		background:white;
+		color:#2d5e88;
+		text-align:left;
+		font: 20px "Helvetica";
+		padding:20px;
+		z-index:0;
+		box-shadow: 5px 5px 5px #888;
+		}
+	.accessibility-info p{
+		color:#3e81bb;
+		font: 16px "Helvetica";
+		}
+	.accessibility-info ul{
+		display: inline;
+		padding: 0;
+		}
+	.accessibility-info ul li{
+		list-style: none;
+		}
+	.accessibility-info ul li a{
+		font: 14px "Helvetica";
+		}
+	.bus-list{
+		padding-bottom:10px;
+		}
+	.bus-list-a{
+		margin:0;
+		float: right;
+		}
+	.accessibility-info p.smaller{
+		font-size: 12px;
+		}
+  </style>
+</head>
+<body>
+<div id='map'></div>
+<div class='title'>Carte du Quartier/ Neighborhood Map<p>Salon Du Livre Anarchiste De Montreal/Montreal Anarchist Bookfair and surrounding amenities.</p></div>
+<div class='accessibility-info'>PUBLIC AND ACCESSIBLE TRANSPORT
+<p>The Montreal Anarchist Bookfair venues are a few flat blocks from metro Lionel-Groulx. General information about this metro station is available online <a href="http://www.stm.info/english/metro/a-m36.htm#Lignes">here</a>.</p>
+<p>This metro station is wheelchair accessible (there is an elevator to both platform levels). This will only be useful if you are coming from one of the 6 other wheelchair accessible metro stations (Montmorency, de la Concorde, Cartier, Berri-UQAM, Henri-Bourassa or Côte-Vertu). Please note that all of these stations are along the orange line of the system.</p>
+<p>Lionel-Groulx Metro is also a major hub for buses. The following buses stop at Lionel-Groulx Metro during the regular daytime schedule. Beside each is a link to the online schedule. On the schedule, wheelchair accessible buses are marked by a star(*).</p>
+<div class="bus-list">
+<div class="bus-list-a"><ul>
+	<li><a href="http://www.stm.info/english/bus/geomet/a-geo78.htm">78 Laurendeau</a></li>
+	<li><a href="http://www.stm.info/english/bus/geomet/a-geo108.htm">108 Bannantyne</a></li>
+	<li><a href="http://www.stm.info/english/bus/geomet/a-geo173.htm">173 Métrobus Victoria</a></li>
+</ul></div>
+<div class="bus-list-b"><ul>
+	<li><a href="http://www.stm.info/english/bus/geomet/a-geo190.htm">190 Métrobus Lachine</a></li>
+ 	<li><a href="http://www.stm.info/english/bus/geomet/a-geo191.htm">191 Broadway/Provost</a></li>
+ 	<li><a href="http://www.stm.info/english/bus/geomet/a-geo211.htm">211 Sainte-Anne-de-Bellevue</a></li>
+ 	<li><a href="http://www.stm.info/english/bus/geomet/a-geo221.htm">221 Métrobus Lionel-Groulx</a></li>
+</ul>
+</div>
+</div>
+<p class="smaller">The STM also has a service called “ParaTransit”. To see if you are eligible for this service, or to learn more, call 514-280-8211 or consult their <a href="http://www.stm.info/english/t-adapte/a-index.htm">website</a>.</p>
+</div>
+<script>
+  mapbox.auto('map', 'mayarichman.map-hnjzw2pt');
+  var map = mapbox.map('map');
+  map.markerLayer
+  // map.zoom(8).center({ lat: 45.482, lon: -73.576 });
+</script>
+</body>
+</html>
