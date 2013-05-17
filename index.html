@@ -7,35 +7,50 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <style>
     body { margin:0; padding:0;}
-    #map { position:absolute; top:0; bottom:0; width:100%; z-index:-1;}
-	.marker-popup {
+	a {
+	    color:rgb(190, 0, 0);
+	    text-decoration: none;
+		}
+	a:hover{
+		text-decoration: underline;
+		}
+	#map { position:absolute; top:0; bottom:0; width:100%; z-index:-1;}
+    .marker-popup {
 		font: 16px "Helvetica" !important;
-	  	padding:10px 5px 10px 5px;
-  	    }
-	.marker-popup:after {
+		padding:10px 5px 10px 5px;
+        }
+    .marker-popup:after {
 	    }
 	.marker-popup:before {
 	    }
-	.CCGV p{
+	.CCGV p {
 		font-size: 13px;
 		margin-left:5px;
 		font-family: "Helvetica" !important;
 	}
-	.CEDA p{
+	.CCGV img {
+		width:100px;
+		height:100px;
+	}
+	.CEDA p {
 		font-size: 13px;
 		margin-left:5px;
 		font-family: "Helvetica" !important;
-	}	
+	}
+    .CEDA img {
+		width:100px;
+		height:100px;
+		}
 	.zoomer {
 	  	width:30px;
 		height:30px;
 	  	top:130px;
-	  	left:10px;
+	  	left:20px;
 		z-index:0;
 	    }
 	.zoomin {
 	    background-position:-31px -1px;
-	    left:39px;
+	    left:49px;
 	    -webkit-border-radius:0 3px 3px 0;
 	            border-radius:0 3px 3px 0;
 	    }
@@ -44,16 +59,9 @@
 	    -webkit-border-radius:3px 0 0 3px;
 	            border-radius:3px 0 0 3px;
 	    }
-	a {
-	    color:#00BACC;
-	    text-decoration: none;
-	  	}
-	a:hover{
-		text-decoration: underline;
-		}
 	.title{
 		height:100px;
-		background:lightblue;
+		background:rgba(126, 29, 29, 0.88);
 		color:white;
 		font: 50px "Helvetica";
 		padding:10px 10px 10px 30px;
@@ -61,28 +69,29 @@
 		box-shadow: 5px 5px 5px #888;
 		}
 	.title p{
-		font: 20px "Helvetica";
-		color: #2d5e88;
-		margin: 10px 20px 0 30px;
+		font: 21px "Open Sans";
+		color: rgb(230, 230, 230);
+		margin: 5px 0 0 10px;
+		letter-spacing: 1.5px;
 		}
 	.accessibility-info{
 		position:absolute;
 		border-radius:10px;
 		top:130px;
-		right:10px;
+		right:20px;
 		height:auto;
-		width:400px;
+		width:445px;
 		background:white;
-		color:#2d5e88;
+		color:rgb(136, 45, 45);
 		text-align:left;
-		font: 20px "Helvetica";
-		padding:20px;
+		font: 24px "Open Sans";
+		padding:15px;
 		z-index:0;
 		box-shadow: 5px 5px 5px #888;
 		}
 	.accessibility-info p{
-		color:#3e81bb;
-		font: 16px "Helvetica";
+		color:rgb(62, 67, 71);
+		font: 15px "Helvetica";
 		}
 	.accessibility-info ul{
 		display: inline;
